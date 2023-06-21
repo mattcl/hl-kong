@@ -19,7 +19,7 @@ spec:
           port: 8444
     - kind: Rule
       match: Host(`api.hl.ancalagon.black`)
-      priority: 10
+      priority: 9
       services:
         - name: kong-proxy
           port: 80

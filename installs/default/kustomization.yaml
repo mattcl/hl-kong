@@ -7,5 +7,5 @@ resources:
   - "ingress.yaml"
 
 patches:
-  - path: override-replicas.yaml
+  - path: change-proxy-deployment.yaml
   - path: change-proxy-service-type.yaml

@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: proxy-kong
+  name: proxy-kong
+  namespace: kong
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: proxy
+          env:
+            - name: KONG_ADMIN_LISTEN
+              value: 0.0.0.0:8444 reuseport backlog=16384

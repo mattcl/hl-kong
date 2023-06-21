@@ -17,6 +17,7 @@ spec:
       services:
         - name: kong-admin
           port: 8444
+          scheme: https
     - kind: Rule
       match: Host(`api.hl.ancalagon.black`)
       priority: 9

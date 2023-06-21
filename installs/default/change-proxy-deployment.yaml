@@ -7,10 +7,12 @@ metadata:
   namespace: kong
 spec:
   replicas: 1
-  # template:
-  #   spec:
-  #     containers:
-  #       - name: proxy
-  #         env:
-  #           - name: KONG_ADMIN_LISTEN
-  #             value: 0.0.0.0:8444 reuseport backlog=16384
+  template:
+    spec:
+      containers:
+        - name: proxy
+          env:
+            - name: KONG_ADMIN_GUI_PATH
+              value: /manager
+            - name: KONG_ADMIN_GUI_URL
+              value: https://api-admin.hl.ancalagon.black/manager
